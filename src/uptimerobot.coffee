@@ -21,7 +21,7 @@ apiKey = process.env.HUBOT_UPTIMEROBOT_APIKEY
 
 module.exports = (robot) ->
   robot.respond /uptime/i, (res) ->
-    robot.http('https://api.uptimerobot.com/getMonitors')
+    robot.http('https://api.uptimerobot.com/v2/getMonitors')
       .query({
         apiKey: apiKey
         format: "json"
